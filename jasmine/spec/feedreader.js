@@ -31,7 +31,7 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it('URL are defined', () => {
+        it('URL are defined and not empty', () => {
             // loops through each feed and expect that feed URL is defined and not empty
             allFeeds.forEach(function(feed) {
                 expect(feed.url).toBeDefined();
@@ -43,7 +43,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('Name are defined', () => {
+        it('Name are defined and not empty', () => {
             // loops through each feed and expect that feed name is defined and not empty
             allFeeds.forEach( (feed) => {
                 expect(feed.name).toBeDefined();
@@ -61,7 +61,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
         it('The menu element is hidden', () => {
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
         /* TODO: Write a test that ensures the menu changes
